@@ -1,0 +1,314 @@
+    /* Base navbar styling */
+    
+    .navbar {
+        background: linear-gradient(90deg, rgba(173, 118, 205, 1) 0%, rgba(194, 148, 214, 1) 75%);
+        border-radius: 30px;
+        /* Rounded edges */
+        padding: 0.2rem 1rem;
+        /* Adjust padding to change height indirectly */
+        height: 60px;
+        /* Set a specific height if needed */
+        width: auto;
+        /* It can be auto (default), a percentage, or a fixed value */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        /* Adds some space below the navbar */
+        /* Add a max-width if you want to limit how wide the navbar can be */
+        max-width: 1200px;
+        /* Example fixed max-width or use a percentage value */
+        margin-left: auto;
+        /* These two margins center the navbar if max-width is set */
+        margin-right: auto;
+    }
+    /* Style for the brand name */
+    
+    .navbar-brand {
+        font-family: 'Syne', serif;
+        /* Different font for the brand */
+        font-size: 24px;
+        /* Larger size for the brand name */
+        font-weight: 700;
+        color: #1F1F1F;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        /* Vertical padding for alignment */
+        font-style: normal;
+        line-height: normal;
+    }
+    /* Style for the navigation items */
+    
+    .navbar-nav .nav-link {
+        font-family: 'Inter', sans-serif;
+        /* Using Inter font */
+        font-size: 18px;
+        /* Adjust the size as needed */
+        color: #1F1F1F;
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        /* Horizontal and vertical padding */
+        text-decoration: none;
+        transition: color 0.2s;
+        /* Smooth transition for hover effects */
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: #000;
+        /* Color change on hover */
+    }
+    /* Style for the login button */
+    
+    .login-button {
+        border: 1px solid #000;
+        /* Black border */
+        background-color: #000;
+        /* Black background */
+        color: #fff;
+        /* White text */
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        padding: 0.5rem 1.5rem;
+        /* Padding inside the button */
+        border-radius: 15px;
+        /* Rounded corners for the button */
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
+        /* Smooth transition for hover effects */
+    }
+    
+    .btn {
+        border-radius: 10px;
+        font-family: "inter";
+    }
+    
+    .btn-outline-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-border-color: #000;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #a45ace;
+        --bs-btn-hover-border-color: #000;
+        --bs-btn-focus-shadow-rgb: 13, 110, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #653282;
+        --bs-btn-active-border-color: #000;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #5e3184;
+        --bs-btn-disabled-bg: transparent;
+        --bs-btn-disabled-border-color: #692e8a;
+        --bs-gradient: none;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar-brand {
+            font-size: 24px;
+            /* Smaller font size for mobile devices */
+        }
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            /* Smaller font size for mobile devices */
+        }
+        .login-button {
+            padding: 0.4rem 1.2rem;
+            /* Slightly smaller padding for mobile devices */
+            font-size: 14px;
+            /* Smaller font size for mobile devices */
+        }
+    }
+    /* Additional responsive adjustments if needed */
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: #f8f8f8;
+    }
+    /* Result section styling */
+    
+    .result-section {
+        position: relative;
+        /* This makes it a containing block for absolute children */
+        text-align: center;
+        padding: 20px;
+        margin-top: 200px;
+        /* Space above the section */
+        box-sizing: border-box;
+    }
+    
+    .result-title {
+        font-family: 'Noto Serif', serif;
+        font-size: 2.5em;
+        /* 40px if 1em = 16px */
+        color: #4D1D5C;
+        position: absolute;
+        /* Absolute position */
+        top: 50px;
+        /* Adjust this value to position the title above the image container */
+        left: 50%;
+        /* Center horizontally */
+        transform: translateX(-50%);
+        /* Center horizontally taking into account its own width */
+        width: 250px;
+        /* Match width of the image container */
+        margin: 0;
+        /* Remove margin */
+        border-radius: 16px;
+        /* Rounded corners */
+        border-bottom: 1px solid #4D1D5C;
+        /* Bottom border */
+        background: rgba(178, 129, 217, 0);
+        /* Transparent background */
+        padding: 1px 1;
+        border-width: 1px;
+    }
+    
+    .result-image-container {
+        background-color: #DCC6E0;
+        /* Placeholder color for the image background */
+        border-radius: 20px;
+        height: 300px;
+        width: 800px;
+        /* Adjust as needed for your image */
+        position: relative;
+        /* Needed to stack the title absolutely above it */
+        margin-left: auto;
+        margin-right: auto;
+        /* Center the container */
+        margin-top: 100px;
+        /* Space from the top of the section */
+    }
+    
+    .result-description p {
+        font-size: 1em;
+        color: #333;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        text-align: left;
+        font-family: "inter";
+        padding-left: 100px;
+    }
+    
+    .result-description h2 {
+        font-family: "inter";
+        text-align: left;
+        padding: 1px;
+        padding-left: 1px;
+        margin-top: 32px;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--bs-heading-color);
+        padding-left: 95px;
+    }
+    /* Media query for smaller screens */
+    
+    @media (max-width: 768px) {
+        /* Adjust the styles for smaller screens */
+    }
+    
+    h3.result-description {
+        color: black;
+        font-size: 48px;
+        font-family: Noto Serif;
+        font-weight: 700;
+        line-height: 80.45px;
+        word-wrap: break-word
+    }
+    
+    .feedback-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Noto Serif', serif;
+        width: 100%;
+        height: 200vh;
+        margin: auto;
+        padding: 20px 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    .star-rating {
+        color: gold;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        /* Add vertical spacing */
+    }
+    
+    .star {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 0 5px;
+        color: #d5d2d7;
+        /* Add spacing between stars */
+    }
+    /* Hover effect for stars */
+    
+    .star:hover {
+        color: orange;
+    }
+    
+    .save-button {
+        background-color: #AD76CD;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        display: block;
+        /* Ensure the button appears on a new line */
+        margin: 20px auto;
+        /* Center the button horizontally */
+    }
+    
+    .feedback-container textarea {
+        width: 80%;
+        /* Adjust width to your preference */
+        max-width: 600px;
+        /* Maximum width, keeps it from getting too wide */
+        height: 150px;
+        /* Adjust height to your preference */
+        margin: 20px auto;
+        /* Center the textarea horizontally */
+        padding: 15px;
+        /* Padding inside the textarea */
+        border: 1px solid #ccc;
+        /* Border color */
+        border-radius: 4px;
+        /* Rounded corners */
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        /* Inner shadow for some depth */
+        font-family: 'Inter', sans-serif;
+        /* Font family */
+        font-size: 1rem;
+        /* Font size */
+        line-height: 1.5;
+        /* Line height for text inside */
+        color: #333;
+        /* Text color */
+        background-color: #fff;
+        /* Background color */
+        resize: vertical;
+        /* Allow only vertical resizing */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+        display: block;
+        /* Ensure it's a block-level element */
+    }
+    .logo-icon,
+    .phone-icon{
+  font-size: 2rem;
+} 
